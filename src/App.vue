@@ -1,15 +1,28 @@
 <template>
   <div id="app">
-    <!-- 路由占位符 -->
-    <router-view></router-view>
+   
+    
+    <keep-alive exclude="detail">
+      <router-view/>
+    </keep-alive>
+     <maintabbar> </maintabbar>
   </div>
 </template>
-
 <script>
+const maintabbar =()=>import('./components/content/maintabbar')
 export default {
-  name: 'app'
+  name: 'App',
+  components:{
+    maintabbar,
+   
+    
+    
+  }
 }
 </script>
-
 <style>
+
+@import url('./assets/css/base.css');
+
+
 </style>
